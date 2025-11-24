@@ -311,7 +311,11 @@ docker push:
 
 #### **Результат:**
 
-* В качесте сервиса использовал GitLab.com, свой ci/cd сервис не поднимал. В кластере установил дополнительный gitlab-runner и подключил к [проекту тестового приложения](https://gitlab.com/netology-devops-diploma-yc/web-app/).
+* В качесте сервиса использовал GitLab.com, свой ci/cd сервис не поднимал. В кластере установил дополнительный gitlab-runner и подключил к [проекту тестового приложения](https://gitlab.com/netology-devops-diploma-yc/web-app/), конфиг-файл и скриншот с подключенным раннером:
+
+  * https://gitlab.com/netology-devops-diploma-yc/k8s-cluster-config/-/tree/main/gitlab-runner/web-app
+
+  * ![](./img/024-01-01-05-00.png)
 
 * В открытом доступе:
 
