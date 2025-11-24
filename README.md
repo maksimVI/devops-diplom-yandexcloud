@@ -88,13 +88,14 @@ export YC_SERVICE_ACCOUNT_KEY_FILE="~/terraform/secrets/tf-sa-authorized-key.jso
 ![](./img/024-01-01-01-03-01.png)
 
 Конфигурация: https://gitlab.com/netology-devops-diploma-yc/infra/-/blob/main/03-infra
+
 Манифест: https://gitlab.com/netology-devops-diploma-yc/infra/-/blob/main/03-infra/k8s-vpc.tf
 
-Отрабатывает `terraform destroy` (скриноты с готовыми ВМ из следующего этапа):
+Отрабатывает `terraform destroy` (скринщоты с готовыми ВМ из следующего этапа):
 
 ![](./img/024-01-01-02-01.png)
 
-Отрабатывает `terraform apply` (скриноты с готовыми ВМ из следующего этапа):
+Отрабатывает `terraform apply` (скриншоты с готовыми ВМ из следующего этапа):
 
 ![](./img/024-01-01-02-02.png)
 
@@ -144,7 +145,9 @@ inventory/hosts.yaml сгенерированный Terraform: https://gitlab.co
 
 Скопирую на рабочую машину файл kubeconfig через bastion (назвал nat-vm):
 
+```bash
 scp -J ubuntu@158.160.122.21 ubuntu@192.168.10.22:~/.kube/config ~/.kube/config
+```
 
 В файле kubeconfig изменять IP-адрес сервера с локального на внешний IP-адрес нет необходимости (т.к. у мастера нет внешнего IP), создам SSH-туннель для доступа:
 
@@ -201,11 +204,13 @@ ansible all -m ping -i inventory/mycluster/hosts.yml -u ubuntu
 
 Git репозиторий с тестовым приложением и Dockerfile:
 
-https://hub.docker.com/repository/docker/maksimvi/diploma-test-app
+* https://gitlab.com/netology-devops-diploma-yc/web-app
 
 DockerHub регистри с собранным docker image:
 
-https://gitlab.com/netology-devops-diploma-yc/web-app
+* https://hub.docker.com/repository/docker/maksimvi/diploma-test-app
+
+* https://hub.docker.com/repository/docker/maksimvi/diploma-test-app/tags/1.0.0/
 
 docker build:
 
